@@ -5,11 +5,11 @@
 
 (def whole-numbers (iterate inc 0))
 
-(defn sum [coll] (apply + coll))
+(defn sum [coll] (reduce + coll))
 
-(defn product [coll] (apply * coll))
+(defn product [coll] (reduce * coll))
 
-(defn digits [num] (map integer (map str (seq (str num)))))
+(defn digits [num] (map integer (map str (str num))))
 
 (defn consecutive [n coll] (take-while #(= n (count %))(map #(take n (drop % coll)) whole-numbers)))
 
