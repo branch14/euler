@@ -20,7 +20,7 @@
 (time
  (last
   (first
-   (drop 19 (iterate
+   (drop 20 (iterate
              (fn [l] (let [c (reduce (fn [a b] (conj a (+ b (last a)))) [1] (rest l))]
                        (conj c (* 2 (last c)))))
              [1])))))
