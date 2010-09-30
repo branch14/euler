@@ -1,6 +1,8 @@
 (ns euler.util
   (:import (java.util.regex Pattern)))
 
+(defn sqr [x] (Math/pow x 2))
+
 (defn integer [s] (Integer/parseInt s))
 
 (def whole-numbers (iterate inc 0))
